@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Proexcel Systems | Automation • Panel QC • Instrumentation</title>
+
+<meta name="description" content="Proexcel Systems provides Automation, Panel QC, Electrical & Instrumentation services with 20+ years of experience in PLC, SCADA, HMI, VFD and Industrial Systems.">
+<meta name="keywords" content="Automation, PLC, SCADA, Instrumentation, Panel QC, Electrical Panels, Pune">
+<meta name="author" content="Proexcel Systems">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+ --theme:#90EEBF;
+ --dark:#0e2f2a;
+}
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+ background:#f6fffb;
+ color:#333;
+}
+
+/* ================= HEADER ================= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, text right */
+  padding: 15px 40px;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header img {
+  height: 55px;
+}
+
+.company-text {
+  text-align: right;
+}
+
+.company-text h2 {
+  color: var(--dark);
+  font-size: 20px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid var(--theme); /* underline */
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.company-text .certified {
+  color: #0e2f2a;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+
+/* ================= HERO ================= */
+.hero{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  background: linear-gradient(135deg,#082e2a 0%, #0e2f2a 45%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero::before{
+  content: "";
+  position: absolute;
+  inset:0;
+  background: linear-gradient(120deg, rgba(144,238,191,0.04), rgba(255,255,255,0.02));
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index:0;
+  animation: bgShift 12s linear infinite alternate;
+}
+
+@keyframes bgShift{
+  0%{ transform: scale(1) translateX(0) }
+  100%{ transform: scale(1.02) translateX(-30px) }
+}
+
+/* FLOATING BACKGROUND ICONS */
+.bg-animation{
+ position: absolute;
+ top:0; left:0;
+ width:100%; height:100%;
+ z-index:1;
+ overflow:hidden;
+}
+
+.bg-animation .icon{
+ position: absolute;
+ width: 60px;
+ height: 60px;
+ opacity: 0.1;
+ background-size: contain;
+ background-repeat: no-repeat;
+ animation: floatBg linear infinite;
+}
+
+.bg-animation .plc { background-image: url('plc.svg'); top: 10%; left: 5%; animation-duration:25s;}
+.bg-animation .scada { background-image: url('scada.svg'); top: 50%; left: 20%; animation-duration:22s;}
+.bg-animation .pnid { background-image: url('pnid.svg'); top: 20%; left: 60%; animation-duration:28s;}
+.bg-animation .electrical { background-image: url('electrical.svg'); top: 70%; left: 80%; animation-duration:24s;}
+.bg-animation .instrumentation { background-image: url('instrumentation.svg'); top: 40%; left: 40%; animation-duration:26s;}
+
+@keyframes floatBg{
+  0% { transform: translateY(0) rotate(0deg);}
+  50% { transform: translateY(-50px) rotate(180deg);}
+  100% { transform: translateY(0) rotate(360deg);}
+}
+
+/* Hero box */
+.hero-box{
+  position: relative;
+  max-width: 900px;
+  background: rgba(10,25,22,0.45);
+  border-radius: 18px;
+  padding: 35px 40px;
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  animation: floatIn 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.hero-box{
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  overflow: hidden;
+}
+
+.hero-box::before,
+.hero-box::after{
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.18;
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-box::before{
+  right: -60px;
+  top: -40px;
+  background: radial-gradient(circle at 30% 30%, rgba(144,238,191,0.35), rgba(14,47,42,0));
+  animation: blobMove 9s ease-in-out infinite alternate;
+}
+.hero-box::after{
+  left: -80px;
+  bottom: -40px;
+  background: radial-gradient(circle at 70% 70%, rgba(255,255,255,0.06), rgba(14,47,42,0));
+  animation: blobMove 11s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes blobMove{
+  from{ transform: translateY(0) translateX(0) scale(1); }
+  to{ transform: translateY(-20px) translateX(20px) scale(1.06); }
+}
+
+/* CTA buttons and illustration */
+.hero-sub{
+  color: rgba(255,255,255,0.85);
+  font-size:16px;
+  margin-top:8px;
+  margin-bottom:14px;
+}
+.hero-ctas{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-top:12px;
+  z-index:6;
+}
+.btn{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  color:#05302b;
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.12);
+  transition:all .25s ease;
+}
+.btn-primary{
+  background: linear-gradient(90deg,var(--theme), #6fe6b8);
+  color:#042a24;
+  border: none;
+  box-shadow: 0 8px 20px rgba(9,37,33,0.18);
+}
+.btn:hover{ transform: translateY(-3px); box-shadow:0 10px 24px rgba(0,0,0,0.18) }
+.btn-primary:hover{ filter:brightness(0.98) }
+
+.hero-illustration{
+  position:absolute;
+  right:24px;
+  top:50%;
+  transform:translateY(-50%);
+  width:260px;
+  height:260px;
+  z-index:5;
+  opacity:0.95;
+  pointer-events:none;
+}
+
+.scroll-indicator{
+  margin-top:22px;
+  display:block;
+  width:28px;
+  height:38px;
+  border-radius:16px;
+  border:2px solid rgba(255,255,255,0.35);
+  margin-left:auto; margin-right:auto;
+  position:relative;
+}
+.scroll-indicator::after{
+  content:"";
+  position:absolute;
+  left:50%; transform:translateX(-50%);
+  top:8px; width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,0.9);
+  animation: scrollDot 1.6s infinite;
+}
+@keyframes scrollDot{ 0%{top:8px; opacity:1}50%{top:20px; opacity:.45}100%{top:8px; opacity:1} }
+
+.hero-box h1{
+ font-size:40px;
+ margin-bottom:12px;
+ text-shadow:0 2px 4px rgba(0,0,0,0.5);
+ animation: fadeUp 1s ease forwards;
+ opacity:0;
+ animation-delay: 0.3s;
+}
+
+.tagline{
+ color: var(--theme);
+ font-size:20px;
+ font-weight:600;
+ margin-bottom:25px;
+ text-shadow:0 1px 3px rgba(0,0,0,0.5);
+ animation: fadeUp 1s ease forwards;
+ opacity:0;
+ animation-delay: 0.6s;
+}
+
+/* Animated keywords (PLC, P&ID, Instrumentation, Electrical) */
+.keywords{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
+  z-index:6;
+  position:relative;
+}
+.keyword{
+  padding:8px 14px;
+  border-radius:999px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  color:#fff;
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:0.6px;
+  text-transform:uppercase;
+  opacity:0.95;
+  transform-origin:center;
+  animation: pop 6s infinite ease-in-out;
+}
+.keyword:nth-child(1){ animation-delay: 0s }
+.keyword:nth-child(2){ animation-delay: 1.4s }
+.keyword:nth-child(3){ animation-delay: 2.8s }
+.keyword:nth-child(4){ animation-delay: 4.2s }
+
+@keyframes pop{
+  0%{ transform: translateY(6px) scale(0.98); opacity:0.55}
+  10%{ transform: translateY(0) scale(1); opacity:1 }
+  22%{ transform: translateY(0) scale(1); opacity:1 }
+  30%{ transform: translateY(-8px) scale(0.98); opacity:0.6 }
+  100%{ opacity:0.55 }
+}
+
+.hero-text p{
+ font-size:16px;
+ line-height:1.8;
+ margin-bottom:15px;
+ color:#f1f1f1;
+ text-shadow:0 1px 3px rgba(0,0,0,0.5);
+ animation: fadeUp 1s ease forwards;
+ opacity:0;
+ animation-delay: 0.9s;
+}
+
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateY(40px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeUp {
+  0% { opacity:0; transform: translateY(20px); }
+  100% { opacity:1; transform: translateY(0); }
+}
+
+/* ================= SECTIONS ================= */
+section{
+ padding:70px 40px;
+}
+
+h2{
+ text-align:center;
+ font-size:32px;
+ color:var(--dark);
+ margin-bottom:40px;
+}
+
+/* ================= CARDS ================= */
+.cards{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:25px;
+}
+
+.card{
+ background:#ffffff;
+ padding:25px;
+ border-radius:15px;
+ box-shadow:0 10px 25px rgba(0,0,0,0.08);
+ transition:0.3s;
+}
+
+.card img{
+ width:100%;
+ height:160px;
+ object-fit:cover;
+ border-radius:10px;
+ margin-bottom:15px;
+}
+
+.card:hover{
+ transform:translateY(-6px);
+ border-top:5px solid var(--theme);
+}
+
+.card h3{
+ margin-bottom:10px;
+ color:var(--dark);
+}
+
+/* ================= GALLERY ================= */
+.gallery{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px;
+}
+
+.gallery img{
+ width:100%;
+ border-radius:15px;
+ box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ================= CUSTOMERS ================= */
+.customers{
+ text-align:center;
+ font-size:18px;
+}
+
+/* ================= CONTACT ================= */
+.contact{
+ background:#eafff5;
+}
+
+.contact p{
+ text-align:center;
+ margin-bottom:10px;
+ font-size:16px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+ background:#0e2f2a;
+ color:white;
+ padding:20px;
+ text-align:center;
+}
+
+/* ================= MAP ================= */
+iframe{
+ border-radius:15px;
+ box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+ .hero-box h1{
+  font-size:28px;
+ }
+ section{
+  padding:50px 20px;
+ }
+ .hero-box{
+  padding:30px 25px;
+ }
+}
+/* ================= CUSTOMERS ================= */
+.customers h2{
+  font-size:34px;
+  margin-bottom:40px;
+  color:var(--dark);
+  position: relative;
+}
+
+.customers h2::after{
+  content:'';
+  display:block;
+  width:60px;
+  height:3px;
+  background:var(--theme);
+  margin:12px auto 0;
+  border-radius:2px;
+}
+
+.customer-cards{
+  display:flex;
+  justify-content:center; /* center all three cards */
+  gap:20px; /* reduce gap between cards */
+  flex-wrap:wrap; /* responsive wrapping for smaller screens */
+}
+
+.customer-card{
+  background:#ffffff;
+  padding:25px 20px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  width:200px; /* fixed width for consistent spacing */
+}
+
+.customer-logo{
+  width:120px;
+  height:120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:15px;
+  border-radius:50%;
+  background: linear-gradient(135deg, #e0fff7, #c5f5e3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.customer-card img{
+  max-width:80%;
+  max-height:80%;
+  object-fit:contain;
+}
+
+.customer-card p{
+  font-weight:600;
+  color: var(--dark);
+  margin-top:5px;
+  font-size:16px;
+}
+
+.customer-card:hover{
+  transform: translateY(-8px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.customer-card:hover .customer-logo{
+  transform: scale(1.15);
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive for smaller screens */
+@media(max-width:768px){
+  .customer-cards{
+    flex-direction:column;
+    gap:25px;
+    align-items:center;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Proexcel Systems Logo">
+  <div class="company-text">
+    <h2>Proexcel Systems Industrial Automation & Engg. Services</h2>
+    <p class="certified">An ISO 9001:2015 Certified Company</p>
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="bg-animation">
+    <span class="icon plc"></span>
+    <span class="icon scada"></span>
+    <span class="icon pnid"></span>
+    <span class="icon electrical"></span>
+    <span class="icon instrumentation"></span>
+  </div>
+
+  <div class="hero-box">
+    <h1>Automation •  QC • Instrumentation</h1>
+    <p class="tagline">Inspection & Engineering Excellence</p>
+
+    <p class="hero-sub">Solutions across PLC, P&amp;ID, Instrumentation and Electrical engineering — design to commissioning.</p>
+
+    <div class="keywords">
+      <span class="keyword">PLC</span>
+      <span class="keyword">QC</span>
+      <span class="keyword">Instrumentation</span>
+      <span class="keyword">Electrical</span>
+    </div>
+
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="mailto:sales@proexcelsys.in">Contact Us</a>
+      <a class="btn" href="#services">Learn More</a>
+    </div>
+
+    <div class="hero-illustration" aria-hidden="true">
+      <svg viewBox="0 0 200 200" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#90EEBF" stop-opacity="0.35"/><stop offset="1" stop-color="#0e2f2a" stop-opacity="0.12"/></linearGradient>
+        </defs>
+        <g fill="none" fill-rule="evenodd">
+          <circle cx="60" cy="60" r="48" fill="url(#g1)"></circle>
+          <rect x="90" y="40" width="78" height="60" rx="8" fill="#ffffff" fill-opacity="0.06"/>
+          <path d="M36 140c18-26 52-36 84-24" stroke="#90EEBF" stroke-opacity="0.18" stroke-width="6" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-text">
+      <p>At <strong>Proexcel Systems</strong>, our team comprises experienced Engineers with over <strong>20 years of expertise</strong> in Automation including PLC, HMI, SCADA, VFD, Control Panels, Field Sensors, and Instruments.</p>
+      <p>We specialize in Design, Configuration, Software Development, Programming, Installation, and Commissioning with qualified Automation, Instrumentation, Electrical Engineers and skilled Technicians.</p>
+      <p>Our expertise spans Automobile, Material Handling, Water Treatment, Boilers, Distilleries & Breweries, Oil & Gas, Chemical & Petrochemical, Pharmaceutical, and Utilities industries.</p>
+      <p>We deliver solutions exceeding expectations in <strong>Quality, Cost Efficiency, and Timeliness</strong>.</p>
+    </div>
+
+    <span class="scroll-indicator" aria-hidden="true"></span>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section>
+ <h2>Our Services</h2>
+ <div class="cards">
+  <div class="card">
+    <img src="inspection.png" alt="Panel Inspection">
+    <h3>Automation & Panel QC</h3>
+    <p>Inspection, testing and quality assurance for automation and control panels.</p>
+  </div>
+  <div class="card">
+    <img src="instrumentation.jpg" alt="Instrumentation">
+    <h3>PLC • SCADA • HMI</h3>
+    <p>Design, programming and commissioning of industrial automation systems.</p>
+  </div>
+  <div class="card">
+    <img src="automation.png" alt="Automation">
+    <h3>Electrical Systems</h3>
+    <p>HT & LT systems including MCC, PCC, VFD Panels and switchgear.</p>
+  </div>
+  <div class="card">
+    <img src="electrical.png" alt="Electrical">
+    <h3>Instrumentation</h3>
+    <p>ICP panels, field instruments and process control solutions.</p>
+  </div>
+ </div>
+</section>
+
+<!-- ================= CUSTOMERS ================= -->
+<!-- ================= CUSTOMERS ================= -->
+<section class="customers">
+  <h2>Our Customers</h2>
+  <div class="customer-cards">
+    <div class="customer-card">
+      <div class="customer-logo">
+        <img src="thermax.png" alt="Thermax Ltd Logo">
+      </div>
+      <p>Thermax</p>
+    </div>
+    <div class="customer-card">
+      <div class="customer-logo">
+        <img src="bureauv.png" alt="Bureau Veritas Logo">
+      </div>
+      <p>Bureau Veritas</p>
+    </div>
+    <div class="customer-card">
+      <div class="customer-logo">
+        <img src="mojj.png" alt="Mojj Engineering Logo">
+      </div>
+      <p>Mojj Engineering</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+<section class="contact">
+ <h2>Contact Us</h2>
+ <p><strong>Email:</strong> hr@proexcelsys.in | sales@proexcelsys.in | deepak.patil@proexcelsys.in</p>
+ <p><strong>Phone:</strong> 077740 36004</p>
+ <p>
+  <strong>Address:</strong><br>
+  Proexcel Systems, Mahasainik Industrial Estate,<br>
+  Shop No. 60, Plot T-153/1, Pimpri Industrial Area,<br>
+  Bhosari, Pune – 411026
+ </p>
+
+ <iframe
+  src="https://www.google.com/maps?q=Mahasainik%20Industrial%20Estate%20Bhosari%20Pune&output=embed"
+  width="100%" height="350" loading="lazy">
+ </iframe>
+</section>
+
+<footer>
+ © 2025 Proexcel Systems • Automation & Instrumentation Excellence
+</footer>
+
+</body>
+</html>
